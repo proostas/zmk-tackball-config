@@ -29,6 +29,26 @@
             bindings = <&kp ESC>;
             layers = <BASE>;
         };
+        
+        grab_combo {
+            timeout-ms = <75>;
+            key-positions = <0 1 3>;
+            bindings = <&grab_window>;
+            layers = <BASE>;
+        };
+    };
+    
+    macros {
+        grab_window: grab_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_press &kp LGUI>,
+                <&macro_press &mkp MB1>,
+                <&macro_release &kp LGUI>,
+                <&macro_pause_for_release>,
+                <&macro_release &mkp MB1>;
+        };
     };
 
     behaviors {
