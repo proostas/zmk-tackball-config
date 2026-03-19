@@ -3,6 +3,17 @@
 #include "trackball_layout.dtsi"
 
 / {
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <2>;
+        rows = <3>;
+        map = <
+        RC(0,3) RC(0,2)
+        RC(0,0) RC(0,1)
+        RC(0,5) RC(0,4)
+        >;
+    };
+    
     chosen {
         zmk,kscan = &kscan0;
         zmk,physical-layout = &physical_layout;
