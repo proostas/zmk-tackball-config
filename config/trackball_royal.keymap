@@ -83,6 +83,14 @@
             #binding-cells = <0>;
             bindings = <&bt BT_NXT>, <&bt BT_CLR_ALL>;
         };
+        
+        momkp: momkp {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&mkp>;
+        };
     };
     
     keymap {
@@ -91,7 +99,7 @@
         base {
             bindings = <
                 &mkp MB1     &mkp MB2
-                &mo SNIPER   &mo SCROLL
+                &mo SNIPER   &momkp SCROLL MB2
                 &adj1        &adj2
             >;
 
