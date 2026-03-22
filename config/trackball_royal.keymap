@@ -98,9 +98,9 @@
         
         base {
             bindings = <
-                &mkp MB1     &mkp MB2
-                &mo SNIPER   &momkp SCROLL MB2
-                &adj1        &adj2
+                &mkp MB1           &mkp MB2
+                &momkp SNIPER MB1  &momkp SCROLL MB2
+                &adj1              &adj2
             >;
 
             display-name = "Base";
